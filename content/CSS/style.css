@@ -16,7 +16,7 @@
 .navbar{
     width: 85%;                 /*1. Dando un espacion de 85*/              
     margin: auto;               /*2. El margen sera automatico*/
-    padding: 25px 0;            /*3. Teniendolo arriba lo bajamos por medio del padding*/
+    padding: 35px 0;            /*3. Teniendolo arriba lo bajamos por medio del padding*/
     display: flex;               /*4. Para podernos mover con libertad usaremos el display flex*/
     align-items: center;         /*5. Nos ayudara a linear los icocnos de manera horizontal*/
     justify-content: space-between;  /*6. Aliniamos a la derecha*/
@@ -41,6 +41,7 @@
     text-transform: uppercase;  /*3.Nos ayuda  a colocar en mayusculas las letras*/
 }
 
+/*Configuracion del Nav Con moviento*/
 .navbar ul li::after{
     content: '';
     height: 3px;
@@ -51,8 +52,73 @@
     bottom: -10px;
 }
 
-/*Movimineot */
 .navbar ul li:hover::after{
     width: 100%;
 }
+
+/*Contenido Centro*/
+.content{
+    width: 100%;
+    color: white;
+    position: absolute; /*2. Nos ayuda a definier en que posicion que loqueresmo*/
+    top: 50%;
+    transform: translateY(-50%); /*Centramos*/
+    text-align: center;
+}
+
+.content H1{
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p{
+    font-family: 'DM Serif Display', serif;
+    margin: 20px auto;
+    font-weight: 100px;
+    line-height: 25px;
+}
+
+/*Bordes transparentes*/
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #008688;
+    background: transparent;
+    color: white;   
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/*Animacion*/
+span{
+    background: #008688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position:  absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
+
+
+
+
+
+
 
