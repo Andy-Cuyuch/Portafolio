@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/images/covers/background.jpeg); 
+    background-size: cover;
+    background-position: center;
+}
+
+/**Configuracion del recuadro */
+.navbar{
+    width: 85%;                 /*1. Dando un espacion de 85*/              
+    margin: auto;               /*2. El margen sera automatico*/
+    padding: 25px 0;            /*3. Teniendolo arriba lo bajamos por medio del padding*/
+    display: flex;               /*4. Para podernos mover con libertad usaremos el display flex*/
+    align-items: center;         /*5. Nos ayudara a linear los icocnos de manera horizontal*/
+    justify-content: space-between;  /*6. Aliniamos a la derecha*/
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+/*Editaremos la lista por defecto*/
+.navbar ul li{
+    list-style: none;           /*1. Eliminamos la parte de los botonoes decoracion*/
+    display: inline-block;      /*2. Nos ayudara a moverlos y colocarlos de forma horizontal*/
+    margin: 0 20px;             /*3. Le decimos que cuenta espacion necesitamos a los*/
+    position: relative;         /**/
+}
+
+.navbar ul li a{
+    text-decoration: none;      /*1.Quitamos la decoracion*/
+    color: white;             /*2.Agregamos el color*/
+    text-transform: uppercase;  /*3.Nos ayuda  a colocar en mayusculas las letras*/
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+/*Movimineot */
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
